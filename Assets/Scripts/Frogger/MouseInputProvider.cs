@@ -14,7 +14,6 @@ public class MouseInputProvider : MonoBehaviour
         // Convert screen position to world position    
         if (value.Get<Vector2>() != Vector2.zero) {
             worldPosition = Camera.main.ScreenToWorldPoint(value.Get<Vector2>());
-            Debug.Log("Mouse position: " + worldPosition);
         }
     }
 

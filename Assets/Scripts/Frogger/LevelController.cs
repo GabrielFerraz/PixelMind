@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System;
 
 public class LevelController : MonoBehaviour
 {
@@ -16,16 +17,16 @@ public class LevelController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        System.Random rnd = new System.Random();
         Vector2 p;
-        var step = Random.Range(0, groundPositions.Length - 1);
+        var step = rnd.Next(0, groundPositions.Length);
         steps.Enqueue(step);
         p = groundPositions[step].transform.position;
         guideObject = Instantiate(guidePrefab, new Vector2(p.x, p.y), Quaternion.identity);
         int runs = 100;
         do
         {
-            step = Random.Range(0, groundPositions.Length - 1);
+            step = rnd.Next(0, groundPositions.Length);
         } while (steps.Contains(step) && runs-- > 0);
         currentPlayer = step;
         p = groundPositions[step].transform.position;
@@ -41,17 +42,18 @@ public class LevelController : MonoBehaviour
 
     IEnumerator TakeStep(int stepNumber = 1) {
         int next;
+        System.Random rnd = new System.Random();
         for (int i = 0; i < stepNumber; i++)
         {
-            int runs = 100;
+            int runs = 1000;
             do
             {
-                next = Random.Range(0, groundPositions.Length - 1);
+                next = rnd.Next(0, groundPositions.Length);
             } while (steps.Contains(next) && next != currentPlayer && runs-- > 0);
             steps.Enqueue(next);
             var p = groundPositions[next].transform.position;
             var target = new Vector2(p.x, p.y);
-            runs = 100;
+            runs = 1000;
             while (guideObject.transform.position.x != target.x && runs-- > 0)
             {
                 guideObject.transform.position = Vector2.MoveTowards(guideObject.transform.position, target, 3f * Time.deltaTime);
@@ -65,7 +67,7 @@ public class LevelController : MonoBehaviour
     IEnumerator JumpTo(int position) {
         var p = groundPositions[position].transform.position;
         var target = new Vector2(p.x, p.y);
-        int runs = 100;
+        int runs = 1000;
         while (playerObject.transform.position.x != target.x && runs-- > 0)
         {
             playerObject.transform.position = Vector2.MoveTowards(playerObject.transform.position, target, 3f * Time.deltaTime);
@@ -74,7 +76,7 @@ public class LevelController : MonoBehaviour
         }
         isEnabled = true;
         yield return new WaitForSeconds(0.5f);
-        StartCoroutine(TakeStep(1));
+        // StartCoroutine(TakeStep(1));
     }
 
     public void MovePlayer(int position) {
