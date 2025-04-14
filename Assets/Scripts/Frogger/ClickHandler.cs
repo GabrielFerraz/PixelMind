@@ -20,12 +20,7 @@ public class ClickHandler : MonoBehaviour
     }
 
     private void MouseOnClicked() {
-        Debug.Log("coll" + _collider.bounds.Contains(_mouse.worldPosition));
-            
-        Debug.Log("World Position" + _mouse.worldPosition);
-        Debug.Log("Mouse clicked on: " + _collider.bounds);
-        var pos =  new Vector3(_mouse.worldPosition.x, _mouse.worldPosition.y, 0.03f);
-        if(_collider.bounds.Contains(pos)) {
+        if(_collider.OverlapPoint(_mouse.worldPosition)) {
             _clicked?.Invoke();
         }
     }

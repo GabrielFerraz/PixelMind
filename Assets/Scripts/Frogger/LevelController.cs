@@ -74,21 +74,31 @@ public class LevelController : MonoBehaviour
 
             yield return null;
         }
-        isEnabled = true;
         yield return new WaitForSeconds(0.5f);
-        // StartCoroutine(TakeStep(1));
+        StartCoroutine(TakeStep(1));
     }
 
     public void MovePlayer(int position) {
-        Debug.Log("MovePlayer: " + position);
         if (isEnabled) {
+            Debug.Log("Player is enabled: " + position);
             isEnabled = false;
             currentPlayer = position;
-            StartCoroutine(JumpTo(position));
+            if (checkNextPosition(position)) {
+                StartCoroutine(JumpTo(position));
+            } else {
+                isEnabled = true;
+                Debug.Log("Player is enabled: ");
+            }
+            // StartCoroutine(JumpTo(position));
         }
     }
 
-    public void Test() {
-        Debug.Log("Test");
+    private bool checkNextPosition(int position) {
+        if (steps.Peek() == position) {
+            steps.Dequeue();
+            return true;
+        } else {
+            return false;
+        }
     }
 }   
