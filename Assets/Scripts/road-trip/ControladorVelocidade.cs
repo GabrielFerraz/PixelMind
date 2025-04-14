@@ -18,6 +18,12 @@ public class ControladorVelocidade : MonoBehaviour
     public int obstaculosDesviados = 0;
     public TextMeshProUGUI textoPontuacao;
     public TextMeshProUGUI textoVelocidade;
+    public TextMeshProUGUI textoVidas;
+    public TextMeshProUGUI textoRecorde;
+
+    private int vidas = 5;
+    private int pontuacaoAtual = 0;
+    private int recordePessoal = 0;
 
     void Start()
     {
@@ -25,6 +31,8 @@ public class ControladorVelocidade : MonoBehaviour
         {
             corInicialJogador = jogadorRenderer.material.color;
         }
+        AtualizarTextoVidas();
+        AtualizarTextoRecorde();
     }
 
     void Update()
@@ -42,7 +50,18 @@ public class ControladorVelocidade : MonoBehaviour
     {
         if (!isPaused)
         {
-            StartCoroutine(SequenciaColisao());
+            vidas--;
+            AtualizarTextoVidas();
+
+            if (vidas <= 0)
+            {
+                AtualizarRecorde();
+                ReiniciarJogo();
+            }
+            else
+            {
+                StartCoroutine(SequenciaColisao());
+            }
         }
     }
 
@@ -75,9 +94,28 @@ public class ControladorVelocidade : MonoBehaviour
         jogoAtivo = true;
     }
 
+    private void ReiniciarJogo()
+    {
+        vidas = 5;
+        pontuacaoAtual = 0;
+        AtualizarTextoVidas();
+        AtualizarTextoPontuacao();
+        StartCoroutine(SequenciaColisao());
+    }
+
+    private void AtualizarRecorde()
+    {
+        if (pontuacaoAtual > recordePessoal)
+        {
+            recordePessoal = pontuacaoAtual;
+        }
+        AtualizarTextoRecorde();
+    }
+
     public void IncrementarObstaculosDesviados()
     {
         obstaculosDesviados++;
+        pontuacaoAtual = obstaculosDesviados * 10;
         AtualizarTextoPontuacao();
     }
 
@@ -93,8 +131,23 @@ public class ControladorVelocidade : MonoBehaviour
     {
         if (textoPontuacao != null)
         {
-            int pontuacao = obstaculosDesviados * 10;
-            textoPontuacao.text = $"Pontuação: {pontuacao}";
+            textoPontuacao.text = $"Pontuação: {pontuacaoAtual}";
+        }
+    }
+
+    private void AtualizarTextoVidas()
+    {
+        if (textoVidas != null)
+        {
+            textoVidas.text = $"Vidas: {vidas}";
+        }
+    }
+
+    private void AtualizarTextoRecorde()
+    {
+        if (textoRecorde != null)
+        {
+            textoRecorde.text = $"Recorde: {recordePessoal}";
         }
     }
 }
