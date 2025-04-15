@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ControladorVelocidade : MonoBehaviour
 {
@@ -44,6 +45,11 @@ public class ControladorVelocidade : MonoBehaviour
 
         AtualizarTextoVelocidade();
         AtualizarTextoPontuacao();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     public void ReiniciarAposColisao()
