@@ -7,6 +7,7 @@ public class LevelController : MonoBehaviour
 {
     public GameObject playerPrefab; 
     public GameObject guidePrefab; 
+    public GameObject xPrefab; 
     public GameObject[] groundPositions; 
 
     private Queue<int> steps = new Queue<int>();
@@ -14,6 +15,9 @@ public class LevelController : MonoBehaviour
     private GameObject playerObject;
     private int currentPlayer = 0;
     private bool isEnabled = false;
+    private int correctSteps = 0;
+    private LineRenderer lineRenderer;
+    private GameObject xObject; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,6 +35,8 @@ public class LevelController : MonoBehaviour
         currentPlayer = step;
         p = groundPositions[step].transform.position;
         playerObject = Instantiate(playerPrefab, new Vector2(p.x, p.y) , Quaternion.identity);
+        
+        lineRenderer = GetComponent<LineRenderer>();
         StartCoroutine(TakeStep(2));
     }
 
@@ -82,12 +88,16 @@ public class LevelController : MonoBehaviour
         if (isEnabled) {
             Debug.Log("Player is enabled: " + position);
             isEnabled = false;
-            currentPlayer = position;
             if (checkNextPosition(position)) {
                 StartCoroutine(JumpTo(position));
+                currentPlayer = position;
+                correctSteps++;
+                resetError();
             } else {
                 isEnabled = true;
                 Debug.Log("Player is enabled: ");
+                GenerateGuide();
+                xObject = Instantiate(xPrefab, new Vector2(groundPositions[position].transform.position.x, groundPositions[position].transform.position.y), Quaternion.identity);
             }
             // StartCoroutine(JumpTo(position));
         }
@@ -100,5 +110,33 @@ public class LevelController : MonoBehaviour
         } else {
             return false;
         }
+    }
+
+    private void GenerateGuide() {
+        lineRenderer.enabled = true;
+        var currentSteps = steps.ToArray();
+        Vector3 start = groundPositions[currentPlayer].transform.position;
+        Vector3 s1 = groundPositions[currentSteps[0]].transform.position;
+        Vector3 s2 = groundPositions[currentSteps[1]].transform.position;
+        Vector3 guide = guideObject.transform.position;
+        Vector3[] positions = new Vector3[steps.Count + 1];
+        positions[0] = start;
+        positions[1] = s1;
+        positions[2] = s2;
+        positions[3] = guide;
+        lineRenderer.positionCount = positions.Length;
+        lineRenderer.SetPositions(positions);
+        lineRenderer.startWidth = 0.1f;
+        lineRenderer.endWidth = 0.1f;
+        lineRenderer.startColor = Color.red;
+        lineRenderer.endColor = Color.red;
+    }
+
+    private void resetError() {
+        Debug.Log("Reset error" + xObject != null);
+        if (xObject != null) {
+            Destroy(xObject);
+        }
+        lineRenderer.enabled = false;
     }
 }   
