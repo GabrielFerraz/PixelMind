@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
 
 public class LevelController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class LevelController : MonoBehaviour
     public GameObject guidePrefab; 
     public GameObject xPrefab; 
     public GameObject[] groundPositions; 
+    public TextMeshProUGUI stepsCountText;
 
     private Queue<int> steps = new Queue<int>();
     private GameObject guideObject;
@@ -16,7 +18,7 @@ public class LevelController : MonoBehaviour
     private bool isEnabled = false;
     private int correctSteps = 0;
     private LineRenderer lineRenderer;
-    private GameObject xObject; 
+    private List<GameObject> xObjects; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,7 +39,8 @@ public class LevelController : MonoBehaviour
         playerObject = Instantiate(playerPrefab, new Vector2(pos.x, pos.y) , Quaternion.identity);
         
         lineRenderer = GetComponent<LineRenderer>();
-        // StartCoroutine(TakeStep(2));
+        StartCoroutine(TakeStep(2));
+        stepsCountText.text = "Steps: " + correctSteps + "/30";
     }
 
     // Update is called once per frame  
@@ -50,13 +53,14 @@ public class LevelController : MonoBehaviour
 
     IEnumerator TakeStep(int stepNumber = 1) {
         int next;
-        System.Random rnd = new System.Random();
+        Random.InitState((int)System.DateTime.Now.Ticks);
         for (int i = 0; i < stepNumber; i++)
         {
             int runs = 1000;
             do
             {
-                next = rnd.Next(0, groundPositions.Length);
+                next = Random.Range(0, (groundPositions.Length*100) + 1) % groundPositions.Length;
+                Debug.Log("next: " + next);
             } while (steps.Contains(next) && next != currentPlayer && runs-- > 0);
             steps.Enqueue(next);
             var p = groundPositions[next].transform.position;
@@ -83,7 +87,8 @@ public class LevelController : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(0.5f);
-        StartCoroutine(TakeStep(1));
+        var stepsNo = correctSteps != 0 && correctSteps % 10 == 1 ? 2 : 1;
+        StartCoroutine(TakeStep(stepsNo));
     }
 
     public void MovePlayer(int position) {
@@ -94,12 +99,15 @@ public class LevelController : MonoBehaviour
                 StartCoroutine(JumpTo(position));
                 currentPlayer = position;
                 correctSteps++;
+                stepsCountText.text = "Steps: " + correctSteps + "/30";
                 resetError();
             } else {
+                resetError();
                 isEnabled = true;
                 Debug.Log("Player is enabled: ");
                 GenerateGuide();
-                xObject = Instantiate(xPrefab, new Vector2(groundPositions[position].transform.position.x, groundPositions[position].transform.position.y), Quaternion.identity);
+                var xObject = Instantiate(xPrefab, new Vector2(groundPositions[position].transform.position.x, groundPositions[position].transform.position.y), Quaternion.identity);
+                xObjects.Add(xObject);
             }
             // StartCoroutine(JumpTo(position));
         }
@@ -135,9 +143,11 @@ public class LevelController : MonoBehaviour
     }
 
     private void resetError() {
-        Debug.Log("Reset error" + xObject != null);
-        if (xObject != null) {
-            Destroy(xObject);
+        if (xObjects.Count > 0) {
+            foreach (var xObject in xObjects) {
+                Destroy(xObject);
+            }
+            xObjects.Clear();
         }
         lineRenderer.enabled = false;
     }
