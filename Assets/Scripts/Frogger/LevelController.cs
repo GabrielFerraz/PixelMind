@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-using System;
 
 public class LevelController : MonoBehaviour
 {
@@ -21,23 +20,24 @@ public class LevelController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        System.Random rnd = new System.Random();
-        Vector2 p;
-        var step = rnd.Next(0, groundPositions.Length);
+        Random.InitState((int)System.DateTime.Now.Ticks);
+        Vector2 pos;
+        var step = Random.Range(0, (groundPositions.Length*100) + 1) % groundPositions.Length;
         steps.Enqueue(step);
-        p = groundPositions[step].transform.position;
-        guideObject = Instantiate(guidePrefab, new Vector2(p.x, p.y), Quaternion.identity);
+        pos = groundPositions[step].transform.position;
+        guideObject = Instantiate(guidePrefab, new Vector2(pos.x, pos.y), Quaternion.identity);
         int runs = 100;
         do
         {
-            step = rnd.Next(0, groundPositions.Length);
+            step = Random.Range(0, (groundPositions.Length*100) + 1) % groundPositions.Length;
+            Debug.Log("Step: " + step);
         } while (steps.Contains(step) && runs-- > 0);
         currentPlayer = step;
-        p = groundPositions[step].transform.position;
-        playerObject = Instantiate(playerPrefab, new Vector2(p.x, p.y) , Quaternion.identity);
+        pos = groundPositions[step].transform.position;
+        playerObject = Instantiate(playerPrefab, new Vector2(pos.x, pos.y) , Quaternion.identity);
         
         lineRenderer = GetComponent<LineRenderer>();
-        StartCoroutine(TakeStep(2));
+        // StartCoroutine(TakeStep(2));
     }
 
     // Update is called once per frame  
