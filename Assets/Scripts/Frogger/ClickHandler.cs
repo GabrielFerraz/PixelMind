@@ -20,10 +20,7 @@ public class ClickHandler : MonoBehaviour
     }
 
     private void MouseOnClicked() {
-        Debug.Log("Mouse Position: " + _mouse.worldPosition);
-        Debug.Log("Collider Position: " + _collider.bounds.center);
         if(_collider.OverlapPoint(_mouse.worldPosition)) {
-            Debug.Log("Mouse clicked on: " + gameObject.name);
             _clicked?.Invoke();
         }
     }
