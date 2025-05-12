@@ -10,14 +10,26 @@ public class ScoreController : MonoBehaviour
     void Start()
     {
         GameData gameData = SaveSystem.Load();
+        var output = JsonUtility.ToJson(gameData, true);
+        Debug.Log(output);
         for (int i = 0; i < 5; i++)
         {
             var scoreComponent = scores[i];
-            var level = gameData.GetType().GetProperty(gameData.currentLevel)?.GetValue(gameData) as List<GameSessionData>;
-            var score = level[i].score;
-            scoreComponent.scoreText.text = score.ToString();
-            scoreComponent.trophy.SetActive(level[i].timestamp == gameData.currentTimestamp);
-            scoreComponent.bg.SetActive(level[i].timestamp == gameData.currentTimestamp);
+            var level = gameData.currentLevel;
+            if (level == null || i < level.Count)
+            {
+                var score = level[i].score;
+                scoreComponent.scoreText.text = score.ToString();
+                scoreComponent.trophy.SetActive(level[i].timestamp == gameData.currentTimestamp);
+                scoreComponent.bg.SetActive(level[i].timestamp == gameData.currentTimestamp);
+            }
+        }
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
         }
     }
 }

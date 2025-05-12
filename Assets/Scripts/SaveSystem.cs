@@ -12,9 +12,9 @@ public class GameSessionData {
 public class GameData {
     public int currentHighScore;
     public string currentTimestamp;
-    public string currentLevel;
-    public List<GameSessionData> frogger { get; set; }
-    public List<GameSessionData> car{ get; set; }
+    public List<GameSessionData> currentLevel;
+    public List<GameSessionData> frogger;
+    public List<GameSessionData> car;
 }
 
 public class SaveSystem {
@@ -30,6 +30,9 @@ public class SaveSystem {
             string json = File.ReadAllText(filePath);
             return JsonUtility.FromJson<GameData>(json);
         }
-        return new GameData(); // Retorna dados padrão se não existir
+        var gd = new GameData();
+        gd.frogger = new List<GameSessionData>();
+        gd.car = new List<GameSessionData>();
+        return gd; // Retorna dados padrão se não existir
     }
 }

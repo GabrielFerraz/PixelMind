@@ -10,6 +10,9 @@ public class LevelController : MonoBehaviour
     public GameObject xPrefab; 
     public GameObject[] groundPositions; 
     public TextMeshProUGUI stepsCountText;
+    public TextMeshProUGUI scoreText;
+
+    public int maxSteps = 30;
 
     private Queue<int> steps = new Queue<int>();
     private GameObject guideObject;
@@ -20,6 +23,8 @@ public class LevelController : MonoBehaviour
     private int incorrectSteps = 0;
     private LineRenderer lineRenderer;
     private List<GameObject> xObjects = new List<GameObject>(); 
+    private int score = 0;
+    private int stepsAhead = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,6 +58,22 @@ public class LevelController : MonoBehaviour
     }
 
     IEnumerator TakeStep(int stepNumber = 1) {
+        if (correctSteps >= maxSteps) {
+            var gameData = SaveSystem.Load();
+            gameData.currentHighScore = score;
+            gameData.currentTimestamp = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            if (gameData.frogger == null)
+            {
+                gameData.frogger = new List<GameSessionData>();
+            }
+            gameData.frogger.Add(new GameSessionData { score = score, timestamp = gameData.currentTimestamp });
+            gameData.currentLevel = gameData.frogger;
+            SaveSystem.Save(gameData);
+            var output = JsonUtility.ToJson(gameData, true);
+            Debug.Log(output);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Score");
+            yield break;
+        }
         int next;
         Random.InitState((int)System.DateTime.Now.Ticks);
         for (int i = 0; i < stepNumber; i++)
@@ -92,6 +113,7 @@ public class LevelController : MonoBehaviour
         Debug.Log("incorrectSteps: " + incorrectSteps);
         if (incorrectSteps < 2 || steps.Count >= 2){
             StartCoroutine(TakeStep(stepsNo));
+            stepsAhead += stepsNo > 1 ? 1 : 0;
         } else {
             incorrectSteps = 0;
         }
@@ -105,6 +127,8 @@ public class LevelController : MonoBehaviour
                 currentPlayer = position;
                 correctSteps++;
                 stepsCountText.text = "Steps: " + correctSteps + "/30";
+                score += 100 * stepsAhead;
+                scoreText.text = "" + score;
                 resetError();
             } else {
                 resetError();
