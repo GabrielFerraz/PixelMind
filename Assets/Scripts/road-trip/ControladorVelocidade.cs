@@ -62,7 +62,7 @@ public class ControladorVelocidade : MonoBehaviour
             if (vidas <= 0)
             {
                 AtualizarRecorde();
-                ReiniciarJogo();
+                SceneManager.LoadScene("Menu"); // Vai para o menu quando as vidas acabam
             }
             else
             {
