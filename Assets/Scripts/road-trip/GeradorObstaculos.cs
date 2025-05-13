@@ -47,9 +47,20 @@ public class GeradorObstaculos : MonoBehaviour
                 }
             }
 
-            float intervalo = Mathf.Lerp(intervaloMax, intervaloMin, controladorVelocidade.velocidade / controladorVelocidade.velocidadeMaxima);
+            float intervalo = CalcularIntervalo();
             yield return new WaitForSeconds(intervalo);
         }
+    }
+
+    private float CalcularIntervalo()
+    {
+        if (controladorVelocidade == null) return intervaloMax;
+
+        float velocidadeAtual = controladorVelocidade.velocidade;
+        float velocidadeMaxima = controladorVelocidade.velocidadeMaxima;
+
+        // Reduz o intervalo com base na velocidade atual
+        return Mathf.Lerp(intervaloMax, intervaloMin, velocidadeAtual / velocidadeMaxima);
     }
 
     private void ExibirAlerta(Transform pontoGeracao)
