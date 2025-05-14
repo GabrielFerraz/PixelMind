@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Jogador
   - Especial
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -130,10 +130,9 @@ GameObject:
   - component: {fileID: 100326663}
   - component: {fileID: 100326664}
   - component: {fileID: 100326666}
-  - component: {fileID: 100326665}
   m_Layer: 0
   m_Name: Circle (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,8 +146,8 @@ Transform:
   m_GameObject: {fileID: 100326662}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0622, y: -1.9002, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: 0.03, y: -1.25, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -208,33 +207,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &100326665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100326662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &100326666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -292,10 +264,9 @@ GameObject:
   - component: {fileID: 167843508}
   - component: {fileID: 167843509}
   - component: {fileID: 167843511}
-  - component: {fileID: 167843510}
   m_Layer: 0
   m_Name: Circle (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,8 +280,8 @@ Transform:
   m_GameObject: {fileID: 167843507}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.15, y: 0.73, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: 1.15, y: -0.01, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -370,33 +341,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &167843510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167843507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &167843511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -670,10 +614,9 @@ GameObject:
   - component: {fileID: 400797300}
   - component: {fileID: 400797301}
   - component: {fileID: 400797303}
-  - component: {fileID: 400797302}
   m_Layer: 0
   m_Name: Circle (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,8 +630,8 @@ Transform:
   m_GameObject: {fileID: 400797299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 5.26, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: 0.04, y: 3.09, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -748,33 +691,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &400797302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400797299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &400797303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -832,10 +748,9 @@ GameObject:
   - component: {fileID: 449318208}
   - component: {fileID: 449318209}
   - component: {fileID: 449318214}
-  - component: {fileID: 449318213}
   m_Layer: 0
   m_Name: Circle (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -849,8 +764,8 @@ Transform:
   m_GameObject: {fileID: 449318207}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.776, y: -1.8015, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: -1.35, y: -2.1103997, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -910,33 +825,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &449318213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449318207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &449318214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1158,6 +1046,7 @@ RectTransform:
   m_Children:
   - {fileID: 2072626141}
   - {fileID: 1331289561}
+  - {fileID: 1432326557}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1176,10 +1065,9 @@ GameObject:
   - component: {fileID: 881408147}
   - component: {fileID: 881408148}
   - component: {fileID: 881408150}
-  - component: {fileID: 881408149}
   m_Layer: 0
   m_Name: Circle (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1193,8 +1081,8 @@ Transform:
   m_GameObject: {fileID: 881408146}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11, y: 3.04, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: -1.11, y: 1.8700004, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -1254,33 +1142,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &881408149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881408146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &881408150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1338,10 +1199,9 @@ GameObject:
   - component: {fileID: 918488127}
   - component: {fileID: 918488128}
   - component: {fileID: 918488130}
-  - component: {fileID: 918488129}
   m_Layer: 0
   m_Name: Circle (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1355,8 +1215,8 @@ Transform:
   m_GameObject: {fileID: 918488126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8878, y: 5.2402, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: 1.34, y: 4.17, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -1416,33 +1276,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &918488129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918488126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &918488130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1500,10 +1333,9 @@ GameObject:
   - component: {fileID: 1026791900}
   - component: {fileID: 1026791901}
   - component: {fileID: 1026791903}
-  - component: {fileID: 1026791902}
   m_Layer: 0
   m_Name: Circle (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1517,8 +1349,8 @@ Transform:
   m_GameObject: {fileID: 1026791899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.13, y: 0.79, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: -1.1, y: 0.08000004, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -1578,33 +1410,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1026791902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026791899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &1026791903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1664,6 +1469,7 @@ GameObject:
   - component: {fileID: 1062592920}
   - component: {fileID: 1062592919}
   - component: {fileID: 1062592921}
+  - component: {fileID: 1062592922}
   m_Layer: 0
   m_Name: Level Controller
   m_TagString: Untagged
@@ -1699,6 +1505,7 @@ MonoBehaviour:
   - {fileID: 1402766131}
   stepsCountText: {fileID: 2072626142}
   scoreText: {fileID: 1331289562}
+  myCamera: {fileID: 248730234}
   maxSteps: 10
 --- !u!4 &1062592918
 Transform:
@@ -1864,6 +1671,168 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1062592922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062592916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08baa3d19a3754108af85534c7824251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableMultiTouch: 1
+  TreatMousePointerAsFinger: 1
+  TreatMouseWheelAsFingers: 1
+  SimulateMouseWithTouches: 0
+  ProcessUnityTouches: 1
+  RequireControlKeyForMouseZoom: 1
+  MouseDistanceInUnitsForScaleAndRotate: 2
+  MouseWheelDeltaMultiplier: 0.025
+  PassThroughObjects: []
+  AutoAddRequiredComponents: 1
+  DefaultDPI: 200
+  LevelUnloadOption: 2
+--- !u!1 &1122566762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1122566763}
+  - component: {fileID: 1122566765}
+  - component: {fileID: 1122566764}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1122566763
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122566762}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1432326557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1122566764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122566762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Home
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1122566765
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122566762}
+  m_CullTransparentMesh: 1
 --- !u!1 &1331289560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,10 +1865,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 835363420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: 599}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -214, y: -91.81891}
+  m_SizeDelta: {x: 267.1, y: 83.187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331289562
 MonoBehaviour:
@@ -1986,7 +1955,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -227.26118, w: -37.255997}
+  m_margin: {x: -4.0712132, y: 0, z: 0.72685283, w: -2.650673}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2011,10 +1980,9 @@ GameObject:
   - component: {fileID: 1402766133}
   - component: {fileID: 1402766132}
   - component: {fileID: 1402766135}
-  - component: {fileID: 1402766134}
   m_Layer: 0
   m_Name: Circle (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2083,39 +2051,12 @@ Transform:
   m_GameObject: {fileID: 1402766131}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8806, y: -1.8211, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: 1.31, y: -2.13, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1402766134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402766131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &1402766135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2162,6 +2103,139 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1432326556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1432326557}
+  - component: {fileID: 1432326560}
+  - component: {fileID: 1432326559}
+  - component: {fileID: 1432326558}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1432326557
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432326556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1122566763}
+  m_Father: {fileID: 835363420}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90, y: -86}
+  m_SizeDelta: {x: 90.96411, y: 84.82269}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1432326558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432326556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1432326559}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1062592917}
+        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
+        m_MethodName: GoHome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1432326559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432326556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1432326560
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432326556}
+  m_CullTransparentMesh: 1
 --- !u!1 &1501594526
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,10 +2334,9 @@ GameObject:
   - component: {fileID: 1784677321}
   - component: {fileID: 1784677322}
   - component: {fileID: 1784677324}
-  - component: {fileID: 1784677323}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2277,8 +2350,8 @@ Transform:
   m_GameObject: {fileID: 1784677320}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8279, y: 5.26, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: -1.29, y: 4.1898003, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -2338,33 +2411,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1784677323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784677320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &1784677324
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2422,10 +2468,9 @@ GameObject:
   - component: {fileID: 1852989847}
   - component: {fileID: 1852989848}
   - component: {fileID: 1852989850}
-  - component: {fileID: 1852989849}
   m_Layer: 0
   m_Name: Circle (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2439,8 +2484,8 @@ Transform:
   m_GameObject: {fileID: 1852989846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.21, y: 3.1, z: 0.8379}
-  m_LocalScale: {x: 1.4824111, y: 1.4824111, z: 0.98827416}
+  m_LocalPosition: {x: 1.21, y: 1.9300003, z: 0.8379}
+  m_LocalScale: {x: 1.3251718, y: 1.3251718, z: 0.88344795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391183295}
@@ -2500,33 +2545,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1852989849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852989846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e63b9134d60df4f91691bb7b2ae910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062592917}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: MovePlayer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &1852989850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2607,8 +2625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 78, y: -41}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 253, y: -91}
+  m_SizeDelta: {x: 200, y: 84.825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072626142
 MonoBehaviour:
@@ -2630,7 +2648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Steps: 0/30'
+  m_text: 0/30
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2664,7 +2682,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2695,7 +2713,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -227.26118, w: -37.255997}
+  m_margin: {x: 0, y: 0, z: 24.516594, w: -37.255997}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

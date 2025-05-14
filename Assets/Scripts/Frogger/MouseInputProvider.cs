@@ -20,8 +20,4 @@ public class MouseInputProvider : MonoBehaviour
     private void OnAction(InputValue value) {
         Clicked?.Invoke();
     }
-
-    private void OnTest(InputValue value) {
-        Debug.Log("Test input: " + Camera.main.ScreenToWorldPoint(value.Get<Vector2>()));
-    }
 }

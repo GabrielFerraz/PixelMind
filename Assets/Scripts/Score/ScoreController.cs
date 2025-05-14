@@ -10,8 +10,6 @@ public class ScoreController : MonoBehaviour
     void Start()
     {
         GameData gameData = SaveSystem.Load();
-        var output = JsonUtility.ToJson(gameData, true);
-        Debug.Log(output);
         for (int i = 0; i < 5; i++)
         {
             var scoreComponent = scores[i];

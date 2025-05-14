@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be1c1da2808914d4db6e52378f2b118a
+timeCreated: 1494460431
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64276
+  packageName: Fingers Lite - Free Finger Touch Gestures for Unity
+  packageVersion: 2.6.1
+  assetPath: Assets/FingersLite/ChangeLog.txt
+  uploadId: 501782

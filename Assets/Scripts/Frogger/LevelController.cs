@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
+using DigitalRubyShared;
 
 public class LevelController : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class LevelController : MonoBehaviour
     public GameObject[] groundPositions; 
     public TextMeshProUGUI stepsCountText;
     public TextMeshProUGUI scoreText;
-
+    public Camera myCamera;
     public int maxSteps = 30;
 
     private Queue<int> steps = new Queue<int>();
@@ -25,6 +26,7 @@ public class LevelController : MonoBehaviour
     private List<GameObject> xObjects = new List<GameObject>(); 
     private int score = 0;
     private int stepsAhead = 2;
+    private TapGestureRecognizer tapGesture;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,14 +48,23 @@ public class LevelController : MonoBehaviour
         
         lineRenderer = GetComponent<LineRenderer>();
         StartCoroutine(TakeStep(2));
-        stepsCountText.text = "Steps: " + correctSteps + "/30";
+        stepsCountText.text = correctSteps + "/30";
+        CreateTapGesture();
+
+    }
+
+    private void CreateTapGesture()
+    {
+        tapGesture = new TapGestureRecognizer();
+        tapGesture.StateUpdated += TapGestureCallback;
+        FingersScript.Instance.AddGesture(tapGesture);
     }
 
     // Update is called once per frame  
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)) {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+            GoHome();
         }
     }
 
@@ -126,7 +137,7 @@ public class LevelController : MonoBehaviour
                 StartCoroutine(JumpTo(position));
                 currentPlayer = position;
                 correctSteps++;
-                stepsCountText.text = "Steps: " + correctSteps + "/30";
+                stepsCountText.text = correctSteps + "/30";
                 score += 100 * stepsAhead;
                 scoreText.text = "" + score;
                 resetError();
@@ -178,5 +189,32 @@ public class LevelController : MonoBehaviour
             xObjects.Clear();
         }
         lineRenderer.enabled = false;
+    }
+
+    public void GoHome() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+    }
+    private void TapGestureCallback(GestureRecognizer gesture)
+    {
+        if (gesture.State == GestureRecognizerState.Ended)
+        {
+            Debug.Log("Tap at: " + gesture.FocusX + ", " + gesture.FocusY);
+            CheckTap(gesture.FocusX, gesture.FocusY, 0.5f);
+        }
+    }
+
+    private void CheckTap(float screenX, float screenY, float radius)
+    {
+        var pos = new Vector3(screenX, screenY, 0.0f);
+        pos = myCamera.ScreenToWorldPoint(pos);
+        Debug.Log("World position: " + pos);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(pos, radius, Vector2.zero);
+        foreach (RaycastHit2D h in hits)
+        {
+            if (h.transform.gameObject.CompareTag("Ground")) {
+                var position = System.Array.IndexOf(groundPositions, h.transform.gameObject);
+                MovePlayer(position);
+            }
+        }
     }
 }   
