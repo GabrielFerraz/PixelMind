@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
     public void RunCarro()
     {
         // Load the Carro game scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Road-trip");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Road");
     }
 
     public void RunSapo()
