@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class ControladorVelocidade : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class ControladorVelocidade : MonoBehaviour
     private int vidas = 5;
     private int pontuacaoAtual = 0;
     private int recordePessoal = 0;
+    private int sumVelocidade = 0;
+    private int velSamples = 0;
 
     void Start()
     {
@@ -41,6 +44,8 @@ public class ControladorVelocidade : MonoBehaviour
         if (jogoAtivo && velocidade < velocidadeMaxima)
         {
             velocidade += Mathf.Log(1 + aceleracao * Time.deltaTime) * 20;
+            sumVelocidade += Mathf.RoundToInt(velocidade);
+            velSamples++;
         }
 
         AtualizarTextoVelocidade();
@@ -62,7 +67,7 @@ public class ControladorVelocidade : MonoBehaviour
             if (vidas <= 0)
             {
                 AtualizarRecorde();
-                SceneManager.LoadScene("Menu"); // Vai para o menu quando as vidas acabam
+                SceneManager.LoadScene("Score"); // Vai para a tela de pontuação
             }
             else
             {
@@ -116,6 +121,19 @@ public class ControladorVelocidade : MonoBehaviour
             recordePessoal = pontuacaoAtual;
         }
         AtualizarTextoRecorde();
+        
+        var gameData = SaveSystem.Load();
+        var score = pontuacaoAtual + (sumVelocidade / velSamples * 1000);
+        gameData.currentHighScore = score;
+        gameData.currentTimestamp = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        gameData.currentLevelName = "Carro";
+        if (gameData.car == null)
+        {
+            gameData.car = new List<GameSessionData>();
+        }
+        gameData.car.Add(new GameSessionData { score = score, timestamp = gameData.currentTimestamp });
+        gameData.currentLevel = gameData.car;
+        SaveSystem.Save(gameData);
     }
 
     public void IncrementarObstaculosDesviados()
@@ -129,7 +147,7 @@ public class ControladorVelocidade : MonoBehaviour
     {
         if (textoVelocidade != null)
         {
-            textoVelocidade.text = $"Velocidade: {Mathf.RoundToInt(velocidade)} km/h";
+            textoVelocidade.text = $"{Mathf.RoundToInt(velocidade)} km/h";
         }
     }
 
@@ -137,7 +155,7 @@ public class ControladorVelocidade : MonoBehaviour
     {
         if (textoPontuacao != null)
         {
-            textoPontuacao.text = $"Pontuação: {pontuacaoAtual}";
+            textoPontuacao.text = $"Pontos: {pontuacaoAtual}";
         }
     }
 
@@ -155,5 +173,8 @@ public class ControladorVelocidade : MonoBehaviour
         {
             textoRecorde.text = $"Recorde: {recordePessoal}";
         }
+    }
+    public void GoHome() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 }

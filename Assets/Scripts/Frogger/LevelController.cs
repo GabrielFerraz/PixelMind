@@ -73,6 +73,7 @@ public class LevelController : MonoBehaviour
             var gameData = SaveSystem.Load();
             gameData.currentHighScore = score;
             gameData.currentTimestamp = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            gameData.currentLevelName = "Frogger";
             if (gameData.frogger == null)
             {
                 gameData.frogger = new List<GameSessionData>();

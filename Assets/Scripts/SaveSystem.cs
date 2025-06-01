@@ -12,6 +12,7 @@ public class GameSessionData {
 public class GameData {
     public int currentHighScore;
     public string currentTimestamp;
+    public string currentLevelName;
     public List<GameSessionData> currentLevel;
     public List<GameSessionData> frogger;
     public List<GameSessionData> car;
