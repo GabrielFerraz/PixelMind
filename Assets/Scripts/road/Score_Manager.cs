@@ -44,9 +44,9 @@ public class Score_Manager : MonoBehaviour
 
 
 
-        highScoreText.text = "HighScore: " + highScore.ToString();
+        // highScoreText.text = "HighScore: " + highScore.ToString();
 
-        lastScoreText.text = "LastScore: " + lastScore.ToString();
+        // lastScoreText.text = "LastScore: " + lastScore.ToString();
 
     }
 
@@ -58,7 +58,7 @@ public class Score_Manager : MonoBehaviour
 
     {
 
-        scoreText.text = score.ToString();
+        scoreText.text = "Score:" + score.ToString();
 
 
 

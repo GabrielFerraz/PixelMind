@@ -678,6 +678,7 @@ GameObject:
   - component: {fileID: 354476403}
   - component: {fileID: 354476404}
   - component: {fileID: 354476405}
+  - component: {fileID: 354476406}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -701,8 +702,8 @@ MonoBehaviour:
   rotationSpeed: 5
   scoreValue: {fileID: 354476405}
   gameOverPanel: {fileID: 915675815}
-  collisionAudio: {fileID: 0}
-  collectAudio: {fileID: 0}
+  spawner: {fileID: 2045872360}
+  audioSource: {fileID: 0}
 --- !u!212 &354476401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -863,6 +864,103 @@ MonoBehaviour:
   scoreText: {fileID: 1997789711}
   highScoreText: {fileID: 1457957399}
   lastScoreText: {fileID: 2031158467}
+--- !u!82 &354476406
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354476399}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ca7cc79c7f783804db175a20b343b748, type: 3}
+  m_Resource: {fileID: 8300000, guid: ca7cc79c7f783804db175a20b343b748, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &369664806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,8 +2557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 164, y: 370}
-  m_SizeDelta: {x: 400, y: 206.06}
+  m_AnchoredPosition: {x: 72.209, y: 491}
+  m_SizeDelta: {x: 466, y: 187.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327303168
 MonoBehaviour:
@@ -2482,10 +2580,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Velocidade:'
+  m_text: 'Vel:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4bcfd887f6f6e984691fe6ad9b827e37, type: 2}
+  m_sharedMaterial: {fileID: 6987993108144507852, guid: 4bcfd887f6f6e984691fe6ad9b827e37, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2509,14 +2607,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2714,7 +2812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1457957398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3032,8 +3130,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4bcfd887f6f6e984691fe6ad9b827e37, type: 2}
+  m_sharedMaterial: {fileID: 6987993108144507852, guid: 4bcfd887f6f6e984691fe6ad9b827e37, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3405,7 +3503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 131, y: -124}
+  m_AnchoredPosition: {x: 131, y: -216}
   m_SizeDelta: {x: 171.418, y: 124.493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996623307
@@ -3484,7 +3582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 2058694729, guid: 897053df0fbd63c49b027bc69153523a, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3536,8 +3634,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 14}
-  m_SizeDelta: {x: 800, y: 191.005}
+  m_AnchoredPosition: {x: 131, y: 615.9}
+  m_SizeDelta: {x: 583.583, y: 180.807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997789711
 MonoBehaviour:
@@ -3559,10 +3657,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: Score:100000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4bcfd887f6f6e984691fe6ad9b827e37, type: 2}
+  m_sharedMaterial: {fileID: 6987993108144507852, guid: 4bcfd887f6f6e984691fe6ad9b827e37, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3586,14 +3684,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100.2
-  m_fontSizeBase: 100.2
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3624,7 +3722,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -5.099273, y: -5.0991135, z: 5.0993347, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3655,7 +3753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2031158466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3811,6 +3909,10 @@ MonoBehaviour:
   - {fileID: 4577091631203209737, guid: 978438d9fd5379b4e89f4592460aa8a1, type: 3}
   alertPrefab: {fileID: 2064722416567769126, guid: cf3057e6b83a93b4983191d145f6506d, type: 3}
   speedText: {fileID: 1327303168}
+  roadMovement: {fileID: 1940394873}
+  carSpeed: 0
+  speedIncrement: 1
+  speedConstant: 0.1
 --- !u!4 &2045872361
 Transform:
   m_ObjectHideFlags: 0

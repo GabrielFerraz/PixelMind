@@ -6,6 +6,8 @@ public class Menu : MonoBehaviour
     public GameObject creditsButton;
     public GameObject carroButton;
     public GameObject sapoButton;
+    public GameObject expButton;
+    public GameObject patoButton;
     public GameObject backButton;
     public GameObject creditsText;
 
@@ -15,6 +17,8 @@ public class Menu : MonoBehaviour
         creditsButton.SetActive(false);
         carroButton.SetActive(true);
         sapoButton.SetActive(true);
+        expButton.SetActive(true);
+        patoButton.SetActive(true);
         backButton.SetActive(true);
     }
 
@@ -34,6 +38,18 @@ public class Menu : MonoBehaviour
     }
 
     public void RunSapo()
+    {
+        // Load the Sapo game scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+    }
+
+    public void RunExp()
+    {
+        // Load the Sapo game scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+    }
+
+    public void RunPato()
     {
         // Load the Sapo game scene
         UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");

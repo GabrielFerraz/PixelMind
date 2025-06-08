@@ -56,11 +56,11 @@ public class Game_Controller : MonoBehaviour
 
         highScore = PlayerPrefs.GetInt("high_score");
 
-        score = score_manager.score;
+        score = 0;
 
 
 
-        highSoreText.text = "Highscore: " + highScore.ToString();
+        // highSoreText.text = "Highscore: " + highScore.ToString();
 
         scoreText.text = "Your Score: " + score.ToString();
 

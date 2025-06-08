@@ -9,17 +9,23 @@ public class Player_Movement : MonoBehaviour
 
     public Score_Manager scoreValue;
     public GameObject gameOverPanel;
+    public Car_Spawner spawner;
 
     bool isMovingLeft = false;
     bool isMovingRight = false;
+    public AudioSource audioSource;
+    private AudioClip collisionSound;
+    private AudioClip coinSound;
 
-    public AudioSource collisionAudio;
-    public AudioSource collectAudio;
+    
 
     void Start()
     {
         gameOverPanel.SetActive(false);
         Time.timeScale = 1;
+        audioSource = GetComponent<AudioSource>();
+        coinSound = Resources.Load<AudioClip>("Sounds/carro/moeda");
+        collisionSound = Resources.Load<AudioClip>("Sounds/carro/colisao");
     }
 
     void Update()
@@ -99,18 +105,26 @@ public class Player_Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Cars")
+        if (collision.gameObject.tag == "Cars")
         {
-            Time.timeScale = 0;
-            gameOverPanel.SetActive(true);
-            collisionAudio.Play();
+            audioSource.PlayOneShot(collisionSound);
+            spawner.ResetSpeed();
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Coin")
         {
+            audioSource.PlayOneShot(coinSound);
             scoreValue.score += 10;
             Destroy(collision.gameObject);
-            collectAudio.Play();
         }
+    }
+
+    private IEnumerator OpenMenu()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 1;
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 }
