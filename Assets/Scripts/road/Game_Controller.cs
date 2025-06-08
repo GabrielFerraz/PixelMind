@@ -56,7 +56,7 @@ public class Game_Controller : MonoBehaviour
 
         highScore = PlayerPrefs.GetInt("high_score");
 
-        score = 0;
+        score = score_manager.score;
 
 
 
@@ -111,6 +111,16 @@ public class Game_Controller : MonoBehaviour
     {
 
         SceneManager.LoadScene("Menu");
+
+    }
+
+
+
+    public void ScorePage()
+
+    {
+
+        SceneManager.LoadScene("Score");
 
     }
 

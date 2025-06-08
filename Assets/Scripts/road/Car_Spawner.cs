@@ -19,6 +19,7 @@ public class Car_Spawner : MonoBehaviour
     private float minSpawnDelay = 0.8f;
 
     private float[] lanes = new float[] { -1.8f, 0f, 1.8f };
+    private float[] laneAngles = new float[] { -202.5f, -180f, -157.5f };
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class Car_Spawner : MonoBehaviour
                     usedLanes.Add(randLane);
                     Vector3 alertPos = new Vector3(lanes[randLane], transform.position.y, transform.position.z);
                     GameObject alert = Instantiate(alertPrefab, alertPos, Quaternion.identity);
-                    StartCoroutine(SpawnCarWithDelay(alert, alertPos));
+                    StartCoroutine(SpawnCarWithDelay(alert, alertPos, laneAngles[randLane]));
                 }
             }
 
@@ -49,7 +50,7 @@ public class Car_Spawner : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnCarWithDelay(GameObject alert, Vector3 spawnPos)
+    IEnumerator SpawnCarWithDelay(GameObject alert, Vector3 spawnPos, float angle)
     {
         yield return new WaitForSeconds(0.5f);
         Destroy(alert);
@@ -61,7 +62,10 @@ public class Car_Spawner : MonoBehaviour
         if (rb != null)
         {
             float speedMPS = carSpeed / 3.6f;
-            rb.linearVelocity = new Vector2(0, -speedMPS);
+            float angleRad = angle * Mathf.Deg2Rad;
+            Vector2 velocity = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad)) * speedMPS;
+            rb.linearVelocity = velocity;
+            // rb.linearVelocity = new Vector2(0, -speedMPS);
         }
     }
 

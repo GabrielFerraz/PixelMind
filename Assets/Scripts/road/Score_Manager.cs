@@ -27,10 +27,11 @@ public class Score_Manager : MonoBehaviour
     public TextMeshProUGUI lastScoreText;
 
 
+    private float timeLeft = 60f;
 
 
 
-  
+
 
     void Start()
 
@@ -52,17 +53,17 @@ public class Score_Manager : MonoBehaviour
 
 
 
-    
 
-        void Update()
+
+    void Update()
 
     {
 
         scoreText.text = "Score:" + score.ToString();
 
+        timeLeft -= Time.deltaTime;
 
-
-        if(score>highScore)
+        if (score > highScore)
 
         {
 
@@ -80,17 +81,35 @@ public class Score_Manager : MonoBehaviour
 
     {
 
-        while(true)
+        while (true)
 
         {
 
             yield return new WaitForSeconds(0.8f);
 
-            score = score + 1;
+            score = score + 10;
 
             lastScore = score;
 
         }
+
+    }
+    
+    public void SetScore()
+
+    {
+
+        var gameData = SaveSystem.Load();
+        gameData.currentHighScore = score;
+        gameData.currentTimestamp = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        gameData.currentLevelName = "Car";
+        if (gameData.car == null)
+        {
+            gameData.car = new List<GameSessionData>();
+        }
+        gameData.car.Add(new GameSessionData { score = score, timestamp = gameData.currentTimestamp });
+        gameData.currentLevel = gameData.car;
+        SaveSystem.Save(gameData);
 
     }
 

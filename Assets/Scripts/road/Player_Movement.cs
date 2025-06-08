@@ -16,6 +16,7 @@ public class Player_Movement : MonoBehaviour
     public AudioSource audioSource;
     private AudioClip collisionSound;
     private AudioClip coinSound;
+    private float timeLeft = 60f;
 
     
 
@@ -47,6 +48,17 @@ public class Player_Movement : MonoBehaviour
         if (isMovingRight)
         {
             MoveRight();
+        }
+        if (timeLeft <= 0)
+        {
+            Time.timeScale = 0;
+            timeLeft = 10000;
+            scoreValue.SetScore();
+            gameOverPanel.SetActive(true);
+        }
+        else
+        {
+            timeLeft -= Time.deltaTime;
         }
     }
 
@@ -120,11 +132,9 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
-    private IEnumerator OpenMenu()
-    {
-        yield return new WaitForSeconds(0.5f);
-        Time.timeScale = 1;
-        gameOverPanel.SetActive(true);
-        Time.timeScale = 0;
-    }
+    // private IEnumerator OpenMenu()
+    // {
+
+    //     gameOverPanel.SetActive(true);
+    // }
 }
