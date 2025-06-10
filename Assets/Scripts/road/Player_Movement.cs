@@ -16,9 +16,9 @@ public class Player_Movement : MonoBehaviour
     public AudioSource audioSource;
     private AudioClip collisionSound;
     private AudioClip coinSound;
-    private float timeLeft = 60f;
 
-    
+    private AudioClip backgroundMusic; 
+    private float timeLeft = 60f;
 
     void Start()
     {
@@ -27,6 +27,15 @@ public class Player_Movement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         coinSound = Resources.Load<AudioClip>("Sounds/carro/moeda");
         collisionSound = Resources.Load<AudioClip>("Sounds/carro/colisao");
+        backgroundMusic = Resources.Load<AudioClip>("Sounds/carro/fundo");
+
+       
+        if (backgroundMusic != null)
+        {
+            audioSource.clip = backgroundMusic;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
 
     void Update()
@@ -134,7 +143,6 @@ public class Player_Movement : MonoBehaviour
 
     // private IEnumerator OpenMenu()
     // {
-
     //     gameOverPanel.SetActive(true);
     // }
 }

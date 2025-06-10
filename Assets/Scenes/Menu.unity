@@ -565,7 +565,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1491905445}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: RunCarro
+        m_MethodName: RunPato
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   carroButton: {fileID: 975458240}
   sapoButton: {fileID: 951615776}
   expButton: {fileID: 0}
-  patoButton: {fileID: 0}
+  patoButton: {fileID: 566092242}
   backButton: {fileID: 20993020}
   creditsText: {fileID: 646629484}
 --- !u!4 &1491905446
@@ -2479,8 +2479,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PixelMind
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 82251ae353a168944ae5702f3dff8a22, type: 2}
-  m_sharedMaterial: {fileID: -1084173928996459700, guid: 82251ae353a168944ae5702f3dff8a22, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -52,7 +52,7 @@ public class Menu : MonoBehaviour
     public void RunPato()
     {
         // Load the Sapo game scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Pato");
     }
 
     public void Back() {
@@ -60,6 +60,7 @@ public class Menu : MonoBehaviour
         creditsButton.SetActive(true);
         carroButton.SetActive(false);
         sapoButton.SetActive(false);
+        patoButton.SetActive(false);
         backButton.SetActive(false);
         creditsText.SetActive(false);
     }
