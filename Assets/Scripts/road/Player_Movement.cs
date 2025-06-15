@@ -9,17 +9,33 @@ public class Player_Movement : MonoBehaviour
 
     public Score_Manager scoreValue;
     public GameObject gameOverPanel;
+    public Car_Spawner spawner;
 
     bool isMovingLeft = false;
     bool isMovingRight = false;
+    public AudioSource audioSource;
+    private AudioClip collisionSound;
+    private AudioClip coinSound;
 
-    public AudioSource collisionAudio;
-    public AudioSource collectAudio;
+    private AudioClip backgroundMusic; 
+    private float timeLeft = 60f;
 
     void Start()
     {
         gameOverPanel.SetActive(false);
         Time.timeScale = 1;
+        audioSource = GetComponent<AudioSource>();
+        coinSound = Resources.Load<AudioClip>("Sounds/carro/moeda");
+        collisionSound = Resources.Load<AudioClip>("Sounds/carro/colisao");
+        backgroundMusic = Resources.Load<AudioClip>("Sounds/carro/fundo");
+
+       
+        if (backgroundMusic != null)
+        {
+            audioSource.clip = backgroundMusic;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
 
     void Update()
@@ -41,6 +57,17 @@ public class Player_Movement : MonoBehaviour
         if (isMovingRight)
         {
             MoveRight();
+        }
+        if (timeLeft <= 0)
+        {
+            Time.timeScale = 0;
+            timeLeft = 10000;
+            scoreValue.SetScore();
+            gameOverPanel.SetActive(true);
+        }
+        else
+        {
+            timeLeft -= Time.deltaTime;
         }
     }
 
@@ -99,18 +126,23 @@ public class Player_Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Cars")
+        if (collision.gameObject.tag == "Cars")
         {
-            Time.timeScale = 0;
-            gameOverPanel.SetActive(true);
-            collisionAudio.Play();
+            audioSource.PlayOneShot(collisionSound);
+            spawner.ResetSpeed();
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Coin")
         {
+            audioSource.PlayOneShot(coinSound);
             scoreValue.score += 10;
             Destroy(collision.gameObject);
-            collectAudio.Play();
         }
     }
+
+    // private IEnumerator OpenMenu()
+    // {
+    //     gameOverPanel.SetActive(true);
+    // }
 }

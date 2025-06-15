@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 50e357f74c884424a8ba2f201f1d3d58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8526160358213664166
+    second: Passaros e Cachorro Sprites_0
+  - first:
+      213: -3729718574688629177
+    second: Passaros e Cachorro Sprites_1
+  - first:
+      213: 342547502086443515
+    second: Passaros e Cachorro Sprites_2
+  - first:
+      213: -8737503512848710524
+    second: Passaros e Cachorro Sprites_3
+  - first:
+      213: 7276509118417202680
+    second: Passaros e Cachorro Sprites_4
+  - first:
+      213: 6933495199668490851
+    second: Passaros e Cachorro Sprites_5
+  - first:
+      213: 4418728952481403198
+    second: Passaros e Cachorro Sprites_6
+  - first:
+      213: 5742485245123987421
+    second: Passaros e Cachorro Sprites_7
+  - first:
+      213: 1792324445639805516
+    second: Passaros e Cachorro Sprites_8
+  - first:
+      213: -4446160861730834613
+    second: Passaros e Cachorro Sprites_9
+  - first:
+      213: 1887325303797485197
+    second: Passaros e Cachorro Sprites_10
+  - first:
+      213: -398928204662524060
+    second: Passaros e Cachorro Sprites_11
+  - first:
+      213: -890925727168029758
+    second: Passaros e Cachorro Sprites_12
+  - first:
+      213: -7697216608479400028
+    second: Passaros e Cachorro Sprites_13
+  - first:
+      213: -4630139936539673041
+    second: Passaros e Cachorro Sprites_14
+  - first:
+      213: 6788459622440766530
+    second: Passaros e Cachorro Sprites_15
+  - first:
+      213: 5959462525068460125
+    second: Passaros e Cachorro Sprites_16
+  - first:
+      213: -7514047881625728639
+    second: Passaros e Cachorro Sprites_17
+  - first:
+      213: -7242335983533028762
+    second: Passaros e Cachorro Sprites_18
+  - first:
+      213: -1206321829743409841
+    second: Passaros e Cachorro Sprites_19
+  - first:
+      213: -5574991380374114153
+    second: Passaros e Cachorro Sprites_20
+  - first:
+      213: -8821421393634165659
+    second: Passaros e Cachorro Sprites_21
+  - first:
+      213: -9181582923458838082
+    second: Passaros e Cachorro Sprites_22
+  - first:
+      213: 1913405492663013985
+    second: Passaros e Cachorro Sprites_23
+  - first:
+      213: -446979940057838983
+    second: Passaros e Cachorro Sprites_24
+  - first:
+      213: -6699217990955021442
+    second: Passaros e Cachorro Sprites_25
+  - first:
+      213: -1278604571798613790
+    second: Passaros e Cachorro Sprites_26
+  - first:
+      213: -5196308125957770806
+    second: Passaros e Cachorro Sprites_27
+  - first:
+      213: -437622525569537686
+    second: Passaros e Cachorro Sprites_28
+  - first:
+      213: 6759893112244826631
+    second: Passaros e Cachorro Sprites_29
+  - first:
+      213: -6131134849938758440
+    second: Passaros e Cachorro Sprites_30
+  - first:
+      213: 4679411074516223389
+    second: Passaros e Cachorro Sprites_31
+  - first:
+      213: 1229124131366055229
+    second: Passaros e Cachorro Sprites_32
+  - first:
+      213: 2562129324840871204
+    second: Passaros e Cachorro Sprites_33
+  - first:
+      213: -7127612684255018771
+    second: Passaros e Cachorro Sprites_34
+  - first:
+      213: -5904498370204466391
+    second: Passaros e Cachorro Sprites_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6adb7591ca1035670800000000000000
+      internalID: 8526160358213664166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e028b97b06d3cc0800000000000000
+      internalID: -3729718574688629177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf15f846329f0c400800000000000000
+      internalID: 342547502086443515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484ccec29d62eb680800000000000000
+      internalID: -8737503512848710524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fde5289d7a5bf460800000000000000
+      internalID: 7276509118417202680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 0
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362dd1c1629b83060800000000000000
+      internalID: 6933495199668490851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_6
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e315363229a725d30800000000000000
+      internalID: 4418728952481403198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7898bc7e761bf40800000000000000
+      internalID: 5742485245123987421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a0c90569d9fd810800000000000000
+      internalID: 1792324445639805516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 0
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b47f946c0401c42c0800000000000000
+      internalID: -4446160861730834613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e84744d50213a10800000000000000
+      internalID: 1887325303797485197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467b43659e8b67af0800000000000000
+      internalID: -398928204662524060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb94ee75cbc2a3f0800000000000000
+      internalID: -890925727168029758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4af2954b64efd2590800000000000000
+      internalID: -7697216608479400028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ef33e52407ebfb0800000000000000
+      internalID: -4630139936539673041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c0aaf4f04753e50800000000000000
+      internalID: 6788459622440766530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5045fa879344b250800000000000000
+      internalID: 5959462525068460125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_17
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 0
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1890c66434db8b790800000000000000
+      internalID: -7514047881625728639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 0
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a0c756bcd0e7b90800000000000000
+      internalID: -7242335983533028762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 0
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45485defa8424fe0800000000000000
+      internalID: -1206321829743409841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_20
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 0
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790bfea80e6a1a2b0800000000000000
+      internalID: -5574991380374114153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_21
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c776afaf3049580800000000000000
+      internalID: -8821421393634165659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_22
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1817b2af6749080800000000000000
+      internalID: -9181582923458838082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_23
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162d57d6828cd8a10800000000000000
+      internalID: 1913405492663013985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_24
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a802bdc120cc9f0800000000000000
+      internalID: -446979940057838983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_25
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b48303bb89703a0800000000000000
+      internalID: -6699217990955021442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_26
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0d0c19aeb714ee0800000000000000
+      internalID: -1278604571798613790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_27
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1bfc86a4103e7b0800000000000000
+      internalID: -5196308125957770806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_28
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 0
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69e7b1b1a04de9f0800000000000000
+      internalID: -437622525569537686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_29
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 0
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70276fa58f6ffcd50800000000000000
+      internalID: 6759893112244826631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_30
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 0
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4e16f8655d9eaa0800000000000000
+      internalID: -6131134849938758440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_31
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 0
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d958196649b90f040800000000000000
+      internalID: 4679411074516223389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_32
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 0
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d2fe2a2e9be0110800000000000000
+      internalID: 1229124131366055229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_33
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 0
+        width: 37
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42560c3db038e8320800000000000000
+      internalID: 2562129324840871204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_34
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 0
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de049620702a51d90800000000000000
+      internalID: -7127612684255018771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Passaros e Cachorro Sprites_35
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 0
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923071304020f0ea0800000000000000
+      internalID: -5904498370204466391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Passaros e Cachorro Sprites_0: 8526160358213664166
+      Passaros e Cachorro Sprites_1: -3729718574688629177
+      Passaros e Cachorro Sprites_10: 1887325303797485197
+      Passaros e Cachorro Sprites_11: -398928204662524060
+      Passaros e Cachorro Sprites_12: -890925727168029758
+      Passaros e Cachorro Sprites_13: -7697216608479400028
+      Passaros e Cachorro Sprites_14: -4630139936539673041
+      Passaros e Cachorro Sprites_15: 6788459622440766530
+      Passaros e Cachorro Sprites_16: 5959462525068460125
+      Passaros e Cachorro Sprites_17: -7514047881625728639
+      Passaros e Cachorro Sprites_18: -7242335983533028762
+      Passaros e Cachorro Sprites_19: -1206321829743409841
+      Passaros e Cachorro Sprites_2: 342547502086443515
+      Passaros e Cachorro Sprites_20: -5574991380374114153
+      Passaros e Cachorro Sprites_21: -8821421393634165659
+      Passaros e Cachorro Sprites_22: -9181582923458838082
+      Passaros e Cachorro Sprites_23: 1913405492663013985
+      Passaros e Cachorro Sprites_24: -446979940057838983
+      Passaros e Cachorro Sprites_25: -6699217990955021442
+      Passaros e Cachorro Sprites_26: -1278604571798613790
+      Passaros e Cachorro Sprites_27: -5196308125957770806
+      Passaros e Cachorro Sprites_28: -437622525569537686
+      Passaros e Cachorro Sprites_29: 6759893112244826631
+      Passaros e Cachorro Sprites_3: -8737503512848710524
+      Passaros e Cachorro Sprites_30: -6131134849938758440
+      Passaros e Cachorro Sprites_31: 4679411074516223389
+      Passaros e Cachorro Sprites_32: 1229124131366055229
+      Passaros e Cachorro Sprites_33: 2562129324840871204
+      Passaros e Cachorro Sprites_34: -7127612684255018771
+      Passaros e Cachorro Sprites_35: -5904498370204466391
+      Passaros e Cachorro Sprites_4: 7276509118417202680
+      Passaros e Cachorro Sprites_5: 6933495199668490851
+      Passaros e Cachorro Sprites_6: 4418728952481403198
+      Passaros e Cachorro Sprites_7: 5742485245123987421
+      Passaros e Cachorro Sprites_8: 1792324445639805516
+      Passaros e Cachorro Sprites_9: -4446160861730834613
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

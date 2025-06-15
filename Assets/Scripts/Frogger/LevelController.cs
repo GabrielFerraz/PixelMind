@@ -17,7 +17,11 @@ public class LevelController : MonoBehaviour
 
     private Queue<int> steps = new Queue<int>();
     private GameObject guideObject;
+    private SpriteRenderer guideRenderer;
+    private AudioSource guideSound;
     private GameObject playerObject;
+    private SpriteRenderer playerRenderer;
+    private AudioSource playerSound;
     private int currentPlayer = 0;
     private bool isEnabled = false;
     private int correctSteps = 0;
@@ -36,6 +40,8 @@ public class LevelController : MonoBehaviour
         steps.Enqueue(step);
         pos = groundPositions[step].transform.position;
         guideObject = Instantiate(guidePrefab, new Vector2(pos.x, pos.y), Quaternion.identity);
+        guideRenderer = guideObject.GetComponent<SpriteRenderer>();
+        guideSound = guideObject.GetComponent<AudioSource>();
         int runs = 100;
         do
         {
@@ -45,6 +51,8 @@ public class LevelController : MonoBehaviour
         currentPlayer = step;
         pos = groundPositions[step].transform.position;
         playerObject = Instantiate(playerPrefab, new Vector2(pos.x, pos.y) , Quaternion.identity);
+        playerRenderer = playerObject.GetComponent<SpriteRenderer>();
+        playerSound = playerObject.GetComponent<AudioSource>();
         
         lineRenderer = GetComponent<LineRenderer>();
         StartCoroutine(TakeStep(2));
@@ -88,24 +96,52 @@ public class LevelController : MonoBehaviour
         }
         int next;
         Random.InitState((int)System.DateTime.Now.Ticks);
+        yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < stepNumber; i++)
         {
             int runs = 1000;
             do
             {
-                next = Random.Range(0, (groundPositions.Length*100) + 1) % groundPositions.Length;
+                next = Random.Range(0, (groundPositions.Length * 100) + 1) % groundPositions.Length;
                 Debug.Log("next: " + next);
             } while ((steps.Contains(next) || next == currentPlayer) && runs-- > 0);
             steps.Enqueue(next);
             var p = groundPositions[next].transform.position;
             var target = new Vector2(p.x, p.y);
             runs = 1000;
+            Vector2 direction = target - (Vector2)guideObject.transform.position;
+            if (direction != Vector2.zero)
+            {
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                guideObject.transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+            }
+            var sprite = Resources.Load<Sprite>("Images/Sapa2_1");
+            if (sprite != null)
+            {
+                guideRenderer.sprite = sprite;
+                guideRenderer.sortingLayerName = "Pulo";
+                guideSound.volume = 1f;
+                guideSound.Play();
+            }
             while (guideObject.transform.position.x != target.x && runs-- > 0)
             {
                 guideObject.transform.position = Vector2.MoveTowards(guideObject.transform.position, target, 5f * Time.deltaTime);
 
                 yield return null;
             }
+            guideRenderer.sprite = Resources.Load<Sprite>("Images/Sapa1_1");
+            guideRenderer.sortingLayerName = "Default";
+            float startVolume = guideSound.volume;
+            float duration = 0.1f;
+            float elapsed = 0f;
+            while (elapsed < duration)
+            {
+                guideSound.volume = Mathf.Lerp(startVolume, 0f, elapsed / duration);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+            guideSound.volume = 0f;
+            guideSound.Stop();
         }
         isEnabled = true;
     }
@@ -114,12 +150,39 @@ public class LevelController : MonoBehaviour
         var p = groundPositions[position].transform.position;
         var target = new Vector2(p.x, p.y);
         int runs = 1000;
+        Vector2 direction = target - (Vector2)playerObject.transform.position;
+        if (direction != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            playerObject.transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        }
+        var sprite = Resources.Load<Sprite>("Images/Sapo2_1");
+        if (sprite != null)
+        {
+            playerRenderer.sprite = sprite;
+            playerRenderer.sortingLayerName = "Pulo";
+            playerSound.volume = 1f;
+            playerSound.Play();
+        }
         while (playerObject.transform.position.x != target.x && runs-- > 0)
         {
             playerObject.transform.position = Vector2.MoveTowards(playerObject.transform.position, target, 5f * Time.deltaTime);
 
             yield return null;
         }
+        playerRenderer.sprite = Resources.Load<Sprite>("Images/Sapo1_1");
+        playerRenderer.sortingLayerName = "Default";
+        float startVolume = playerSound.volume;
+        float duration = 0.1f;
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            playerSound.volume = Mathf.Lerp(startVolume, 0f, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        playerSound.volume = 0f;
+        playerSound.Stop();
         yield return new WaitForSeconds(0.5f);
         var stepsNo = correctSteps > 0 && correctSteps % 10 == 0 ? 2 : 1;
         Debug.Log("incorrectSteps: " + incorrectSteps);

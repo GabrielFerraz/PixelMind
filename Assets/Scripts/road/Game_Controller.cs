@@ -60,7 +60,7 @@ public class Game_Controller : MonoBehaviour
 
 
 
-        highSoreText.text = "Highscore: " + highScore.ToString();
+        // highSoreText.text = "Highscore: " + highScore.ToString();
 
         scoreText.text = "Your Score: " + score.ToString();
 
@@ -111,6 +111,16 @@ public class Game_Controller : MonoBehaviour
     {
 
         SceneManager.LoadScene("Menu");
+
+    }
+
+
+
+    public void ScorePage()
+
+    {
+
+        SceneManager.LoadScene("Score");
 
     }
 
